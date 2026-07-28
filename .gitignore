@@ -1,0 +1,20 @@
+#Compiled files
+target/
+*.class
+
+#Intellij files
+.idea/
+*.iml
+*.iws
+*.ipr
+
+#Maven
+.mvn/wrapper/maven-wrapper.jar
+
+#Logs
+*.logs
+logs/
+
+#OS files
+.DS_Store
+Thumbs.db
