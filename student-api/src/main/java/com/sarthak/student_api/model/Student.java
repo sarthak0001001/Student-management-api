@@ -1,6 +1,9 @@
 package com.sarthak.student_api.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "student")
@@ -10,8 +13,16 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "Name cannot be empty")
+    @Size(min = 2,max = 50,message = "Name must be between 2 to 50 characters")
     private String name;
+
+    @NotBlank(message = "Email cannot be empty")
+    @Email(message = "Please provide a valid email")
     private String email;
+
+    @NotBlank(message = "Branch cannot be empty")
+    @Size(min = 2,max = 30,message = "Branch must be between  2 to 30 characters")
     private String branch;
 
     public Student(){}

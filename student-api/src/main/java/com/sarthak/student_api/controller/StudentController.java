@@ -1,6 +1,7 @@
 package com.sarthak.student_api.controller;
 import com.sarthak.student_api.model.Student;
 import com.sarthak.student_api.service.StudentService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,12 +26,12 @@ public class StudentController {
     }
 
     @PostMapping
-    public Student addStudent(@RequestBody Student student){
+    public Student addStudent(@Valid @RequestBody Student student){
         return studentService.addStudent(student);
     }
 
     @PutMapping("/{id}")
-    public Student updateStudent(@PathVariable Long id,@RequestBody Student student){
+    public Student updateStudent(@PathVariable Long id,@Valid @RequestBody Student student){
         return studentService.updateStudent(id,student);
     }
 
