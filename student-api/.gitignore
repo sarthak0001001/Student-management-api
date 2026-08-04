@@ -32,26 +32,17 @@ build/
 ### VS Code ###
 .vscode/
 
-#Compiled files
-target/
-*.class
-
-#Intellij files
+##Intellij IDEA##
 .idea/
 *.iml
-*.iws
-*.ipr
+out/
 
-#Maven
-.mvn/wrapper/maven-wrapper.jar
+## Maven ##
+target/
 
-#Logs
-*.logs
-logs/
+## Logs ##
+*.log
 
-#OS files
+## OS Files ##
 .DS_Store
 Thumbs.db
-
-##Local Properties##
-application-local.properties
